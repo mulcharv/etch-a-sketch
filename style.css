@@ -1,0 +1,127 @@
+#container {
+    display : flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    background-color: white; 
+    box-sizing: border-box;
+}
+
+#container {
+    width: 575px;
+    height: 575px;
+    border-color: black;
+    border-width: 10px;
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 231, 231);
+
+}
+
+.controlsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 500px;
+    padding: 5px;
+}
+
+.slideContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 7px;
+    padding-bottom: 0px;
+    font-size: 18px;
+    font-family: 'Cabin Sketch';
+    width: 400px;
+}
+
+#title {
+    padding-bottom: 7px; 
+    font-size: 40px;
+    font-family: 'Bungee Shade';
+}
+
+#containerBackground {
+    width: 600px;
+    height: 600px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#randomColor, #eraser, #clear {
+    background-color: rgb(233, 231, 231);
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    margin: 0px;
+    font-size: 16px;
+    font-family: 'Cabin Sketch';
+    border-radius: 6px;
+    cursor: pointer;;
+    transition: transform .2s
+}
+
+#randomColor:hover, #eraser:hover, #clear:hover {
+    transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+
+}
+
+#colorContainer {
+    font-size: 16px;
+    font-family: 'Cabin Sketch';
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 15px;
+    background-image: linear-gradient(to right, red, gold, lightblue );
+    opacity: 0.7;
+    -webkit-transition: .3s;
+    transition: opacity .3s;
+    transition: transform .2s;
+    border-radius: 6px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: black;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform .1s
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+}
+
+#chooseColor {
+    cursor: pointer;
+    border-radius: 3px;
+    transition: transform .2s
+}
+
+#chooseColor:hover {
+    transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+}

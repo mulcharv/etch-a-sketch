@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EtchSketch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cabin Sketch' rel='stylesheet'>
+</head>
+<body>
+    <div id="title">Etch-A-Sketch</div>
+    <div id="containerBackground">
+    <div id="container"></div>
+    </div>
+    <div class="slideContainer">
+        <label for ="Grid-Size">Grid Size: </label>
+        <input type="range" min="1" max="64" value ="16" class="slider" id="range"> 
+        <span id="value">16x16</span>
+    </div>
+    <div class="controlsContainer">
+    <div id="colorContainer">
+        <input type="color" id="chooseColor"  onchange="makeChosenColor(this.value)">
+        <label for="chooseColor">Choose Color</label>
+    </div>
+
+    <div id ="randomColorContainer">
+        <button type="button" id="randomColor" onmouseup="makeRandomColor()">Random Colour</button>
+    </div>
+
+    <div id="eraser">
+        <button type="button" id="eraser" onmousedown="eraseBoxes()">Eraser</button>
+    </div>
+
+    <div id="clear">
+        <button type="button" id="clear" onmousedown="clearBoxes()">Clear</button>
+    </div>
+    </div>
+    <script src="jsscript.js"></script>
+</body>
+</html>
